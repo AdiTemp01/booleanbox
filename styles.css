@@ -6,9 +6,10 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    background:url('image.png') center/cover repeat;
-    color: #ffffff; /* Light text for better contrast */
+    background: url('image.png') center/cover repeat;
+    color: #ffffff; 
     position: relative;
+    overflow-x: hidden; 
 }
 
 header {
@@ -21,6 +22,7 @@ header {
     padding: 15px 30px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
     animation: fadeInDown 1s ease-out;
+    box-sizing: border-box; 
 }
 
 .logo {
@@ -34,12 +36,12 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: -8%;
-    line-height: 1.2; /* Tighten line spacing */
+    margin-left: -4%;
+    line-height: 1.2; 
 }
 
 .title-container h1 {
-    font-size: 30px; /* Ensure the title is prominent */
+    font-size: 30px; 
     font-weight: bold;
     margin: 0;
     margin-bottom: 5px;
@@ -48,12 +50,11 @@ header {
 }
 
 .title-container h3 {
-    font-size: 1.0rem; /* Smaller subtitle size */
-    margin: 5px 0 0; /* Reduce gap between title and subtitle */
+    font-size: 1rem; 
+    margin: 5px 0 0; 
     font-weight: 500;
     letter-spacing: 0.5px;
 }
-
 
 @keyframes fadeInDown {
     0% {
@@ -67,19 +68,19 @@ header {
 }
 
 main {
-    margin: 10px auto;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 800px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 10px;
+    max-width: 800px; 
+    width: calc(100% - 40px); 
+    padding: 20px;
     background: linear-gradient(145deg, #124259, #234f66);
     border-radius: 16px;
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
-    transform: translateY(20px);
     animation: fadeInUp 1s ease-out;
+    box-sizing: border-box; 
+    overflow-x: hidden;
 }
 
 @keyframes fadeInUp {
@@ -96,7 +97,7 @@ main {
 #question-section {
     font-size: 1.4rem;
     font-weight: 600;
-    color: #89a6b4; /* Bright accent color for text */
+    color: #89a6b4; 
 }
 
 #grid {
@@ -105,6 +106,8 @@ main {
     grid-gap: 5px;
     justify-content: center;
     margin-top: 10px;
+    max-width: 100%;
+    box-sizing: border-box; 
 }
 
 .cell {
@@ -114,13 +117,14 @@ main {
     line-height: 60px;
     font-weight: bold;
     border: 2px solid #2c4755;
-    background-color: #203a48; /* Background matches theme */
+    background-color: #203a48; 
     color: #ffffff;
     border-radius: 8px;
     cursor: pointer;
     user-select: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     font-size: 1.2rem;
+    box-sizing: border-box; 
 }
 
 .cell:hover {
@@ -145,7 +149,7 @@ main {
 }
 
 .selected {
-    border: 2px dashed white; /* Soft green border for selection */
+    border: 2px dashed white;
     box-shadow: 0 0 12px whitesmoke, 0 0 6px rgba(0, 0, 0, 0.3);
     transform: translateY(-3px);
     transition: all 0.4s ease;
@@ -173,3 +177,5 @@ main {
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
     transform: scale(1.05);
 }
+
+
